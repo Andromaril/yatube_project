@@ -6,7 +6,8 @@ from django.http import HttpResponse
 
 # Главная страница
 def index(request):    
-    return HttpResponse('Главная страница')
+    template = 'posts/index.html'
+    return render(request, template)
 
 
 # Страница со списком постов
