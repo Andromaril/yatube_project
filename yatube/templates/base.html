@@ -1,3 +1,4 @@
+{% load static %}
 <!-- templates/base.html -->
 <!DOCTYPE html> <!-- Используется html 5 версии -->
 <html lang="ru"> <!-- Язык сайта - русский -->         
@@ -13,17 +14,18 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <!-- Подключен файл со стандартными стилями бустрап -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <title>Последние обновления на сайте</title>    
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.сss' %}">
   </head>
   <body>       
     <header>
       {% include 'includes/header.html' %}
     </header>
     <main>
+      <div class="container">
       {% block content %}
         Контент не подвезли :(
       {% endblock %}
+      </div>  
     </main>
     <!-- Использованы классы бустрапа: -->
     <!-- border-top: создаёт тонкую линию сверху блока -->
